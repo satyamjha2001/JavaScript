@@ -33,6 +33,12 @@ nav a {
 
 nav a[aria-current='page'] {
   color: #000;
+  font-weight: bold;
+  background-color: #d4d4d4;
+}
+nav a:nth-child(2){
+  color:black;
+  font-weight: bold;
   background-color: #d4d4d4;
 }
 

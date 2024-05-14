@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval And clearInterval</title>
+  </head>
+  <body>
+    <h1>Satyam Aur JavaScript Depth</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // const sayDate = function () {
+    //   console.log("Satyam", new Date().toLocaleString());
+    // };
+    // setInterval(sayDate, 2000);
+    //third parameter
+    const sayDate = function (str) {
+      console.log("Hi", str, new Date().toLocaleTimeString());
+    };
+    let intervalId = null;
+    document.getElementById("start").addEventListener("click", function () {
+      if (intervalId == null) {
+        intervalId = setInterval(sayDate, 1000, "Satyam");
+      }
+    });
+    document.querySelector("#stop").addEventListener("click", () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+      intervalId = null;
+    });
+  </script>
+</html>

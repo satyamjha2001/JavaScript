@@ -1,0 +1,12 @@
+table,th,td{
+    border: 2px solid #3f06e7;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: rgb(110, 10, 10);
+}
+
+tr{
+    background-color: rgb(183, 49, 12);
+}

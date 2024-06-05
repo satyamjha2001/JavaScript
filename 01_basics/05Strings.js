@@ -19,7 +19,7 @@ const newString = gameName.substring(0,6);
 console.log(newString);
 
 
-const anotherString = gameName.slice(-8,4);
+const anotherString = gameName.slice(-9,-4);  //counts from right side to eight
 console.log(anotherString);
 
 const newStringOne = "   satyam    ";
@@ -33,3 +33,4 @@ console.log(url.replace("%20", "-"));
 console.log(url.includes("sundar"));
 
 console.log(gameName.split("-"));
+console.log(typeof(gameName.split("-")));

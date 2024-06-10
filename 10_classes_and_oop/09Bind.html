@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <button>Button Clicked</button>
+  </body>
+  <script>
+    class React{
+        constructor(){
+            this.library="React";
+            this.server="https://localhost:3000";
+
+            //Requirement  :- Jaise hi ye page load ho object create ho React ka. aur jaise hi ye kaam ho mujhe ek reference mil jaaye button ka aur ek method ho handleClicked jo kuchh messege kar de.
+
+            document
+                .querySelector('button')
+                .addEventListener("click", this.handleClick.bind(this));
+        }
+
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React(); //object yaha se ban jaayegaa
+  </script>
+</html>

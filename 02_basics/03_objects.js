@@ -22,8 +22,9 @@ const JsUser = {
 // console.log(JsUser[mySym])
 
 JsUser.email = "satyam@chatgpt.com";
-// Object.freeze(JsUser);
+// Object.freeze(JsUser);  //freeze when implements then we can't update the objects
 JsUser.email = "satyam@microsoft.com";
+// JsUser.last = "jha";
 // console.log(JsUser);
 
 JsUser.greeting = function () {
@@ -33,6 +34,6 @@ JsUser.greetingTwo = function () {
   console.log(`Hello JS user, ${this.name}`);
 };
 
-console.log(JsUser.greeting());
+JsUser.greeting();
 
-console.log(JsUser.greetingTwo());
+JsUser.greetingTwo();

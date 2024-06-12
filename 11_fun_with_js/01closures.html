@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closures and lexical scoping</title>
+  </head>
+  <body style="background-color: #212121; color: #ffffff; font-size: 24px">
+    <h1>Lexical Scoping</h1>
+    <p>
+      lexical scoping simply is that the function which is declared under
+      another function have access to all variables of the outer function or
+      parent function.
+    </p>
+    <pre>
+    <code>
+    function outer(){
+        const username ="satyam";
+        function inner(){
+            console.log("inner",username);  //It uses the parent variable.
+        }
+        inner();
+    }
+    outer();
+    console.log("Too Outer", username);  //Here we got an error
+    </code>
+    </pre>
+
+    <h1>Closures</h1>
+    <p>
+      A closure is the combination of a function bundled together (enclosed)
+      with references to its surrounding state (the lexical environment). In
+      other words, a closure gives you access to an outer function's scope from
+      an inner function. In JavaScript, closures are created every time a
+      function is created, at function creation time.
+    </p>
+  </body>
+  <script>
+    //example of lexical scoping
+
+    // function init() {
+    //   var name = "Mozilla"; // name is a local variable created by init
+    //   function displayName() {
+    //     // displayName() is the inner function, that forms the closure
+    //     console.log(name); // use variable declared in the parent function
+    //   }
+    //   displayName();
+    // }
+    // init();
+
+    function outer() {
+      const username = "satyam";
+      console.log("Outer", secret); // It gives error because child does not give access to parent.
+      function inner() {
+        const secret = "123";
+        console.log("inner", username); //It uses the parent variable.
+      }
+      function innerTwo() {
+        console.log("innerTwo", username); //It uses the parent variable.
+        console.log(secret); // it gives an error because both inner are same level.
+      }
+      inner();
+      innerTwo();
+    }
+    // outer();
+    // console.log("Too Outer", username); //Here we got an error
+
+    //example of closure
+
+    function makeFunc() {
+      const name = "ParentVariable";
+      function displayName() {
+        console.log(name);
+      }
+      return displayName;
+    }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+  </script>
+</html>

@@ -5,7 +5,7 @@ let score = "Satyam";
 
 let valueIntNumber = Number(score);
 // console.log(typeof(valueIntNumber));
-// console.log(valueIntNumber);  //convert to NaN
+// console.log(valueIntNumber);  //convert to NaN score string hai isliye
 
 
 // "33" => 33

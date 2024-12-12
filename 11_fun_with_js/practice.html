@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="sum"></div>
+
+    <script>
+      let n1 = parseFloat(prompt("enter the number", 0));
+      let n2 = parseFloat(prompt("enter the number", 0));
+      let sum = function (n1, n2) {
+        console.log("sum of two numbers is", n1 + n2);
+        return n1 + n2;
+      };
+      let result = sum(n1, n2);
+      let h2 = document.createElement("h2");
+      h2.innerHTML = "sum" + result;
+      document.querySelector("#sum").append(h2);
+    </script>
+  </body>
+</html>
